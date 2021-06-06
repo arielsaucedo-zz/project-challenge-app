@@ -1,0 +1,206 @@
+/* <Sidebar /> style */
+.sidebar {
+  flex-direction: column;
+  height: 100vh;
+  width: 100vh;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 400px;
+}
+
+.new-entry {
+  cursor: pointer;
+  margin-top: 30px;
+  width: 100%;
+
+  transition: color 0.5s;
+}
+
+div .new-entry:hover {
+  color: lightpink;
+}
+/* ------------------------------------------ */
+
+/* <ProjectEntries /> styles */
+.entries {
+  flex: 1 1 auto;
+  margin-top: 30px;
+  overflow-y: scroll;
+}
+/* ------------------------------------------ */
+
+/* Scrollbar style */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: grey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* ------------------------------------------ */
+
+/* <ProyectEntry /> styles */
+.entry {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.entry-picture {
+  height: 70px;
+  width: 70px;
+}
+
+.entry-date-box {
+  font-size: 12px;
+}
+/* ------------------------------------------ */
+
+/* <NothingSelected /> styles */
+.nothing-main-content {
+  height: 100vh;
+}
+/* ------------------------------------------ */
+
+/* <TaskAppBar /> styles */
+.appbar {
+  padding: 10px 20px 10px 20px;
+}
+/* ------------------------------------------ */
+
+/* <TaskScreen /> styles */
+.notes__content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+/* ------------------------------------------ */
+
+/* <TaskCard /> styles */
+
+.two {
+  width: 300px;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 10px;
+}
+
+.name {
+  font-size: 22px;
+  color: #464e56;
+  font-weight: 600;
+  text-align: left;
+}
+
+.quote {
+  font-size: 12px;
+  font-weight: 500;
+  color: #868e94;
+  text-align: left;
+}
+
+.btn-raised {
+  transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+    transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+.btn-raised:not([disabled]):active,
+.btn-raised:not([disabled]):focus,
+.btn-raised:not([disabled]):hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  transform: translate3d(0, -1px, 0);
+  background-color: #8bc34a;
+}
+
+.btn-icon {
+  width: 2.125rem;
+  height: 2.125rem;
+  padding: 0 !important;
+}
+
+.btn-rounded {
+  border-radius: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.light-green {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.85);
+}
+/* ------------------------------------------ */
+
+/* Modal */
+.ReactModalPortal > div {
+  opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 999;
+}
+
+.modal-fondo {
+  background-color: rgba(0, 0, 0, 0.3);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.modal {
+  background: white;
+  border-radius: 15px;
+  color: rgb(51, 51, 51);
+  display: inline;
+  max-height: 350px;
+  max-width: 500px;
+  outline: none;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.modal-task {
+  background: white;
+  border-radius: 15px;
+  color: rgb(51, 51, 51);
+  display: inline;
+  max-height: 350px;
+  max-width: 500px;
+  outline: none;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
