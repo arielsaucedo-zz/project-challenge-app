@@ -9,7 +9,7 @@ export const TaskScreen = () => {
   const { active } = useSelector((state) => state.projects);
 
   return (
-    <div className="d-flex flex-column">
+    <div className="d-flex flex-column animate__animated animate__fadeIn">
       <TaskAppBar />
       <div className="d-flex p-3">
         {tasks.map(

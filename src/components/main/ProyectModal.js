@@ -27,6 +27,7 @@ export const ProyectModal = () => {
 
   const dispatch = useDispatch();
 
+  const [titleValid, setTitleValid] = useState(true);
   const [formValues, setFormValues] = useState(initProyect);
   const { title } = formValues;
 
@@ -43,6 +44,11 @@ export const ProyectModal = () => {
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
+
+    if (formValues.title.trim().length < 2) {
+      return setTitleValid(false);
+    }
+
     dispatch(
       projectAddNew({
         ...formValues,
@@ -51,6 +57,7 @@ export const ProyectModal = () => {
       })
     );
 
+    setTitleValid(true);
     closeModal();
   };
 
@@ -70,7 +77,7 @@ export const ProyectModal = () => {
         <div className="form-group">
           <label>Project Name</label>
           <input
-            className="form-control"
+            className={`form-control ${!titleValid && "is-invalid"}`}
             name="title"
             value={title}
             placeholder="Your project"

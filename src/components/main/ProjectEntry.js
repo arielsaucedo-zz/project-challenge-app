@@ -16,7 +16,7 @@ export const ProjectEntry = ({ id, title, type, date }) => {
 
   return (
     <div
-      className="d-flex justify-content-between bg-light rounded-3 text-dark entry"
+      className="d-flex justify-content-between bg-light rounded-3 text-dark entry animate__animated animate__fadeIn"
       onClick={handleEntryClick}
     >
       <div

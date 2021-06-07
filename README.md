@@ -1,74 +1,71 @@
-# Getting Started with Create React App
+# This project was created with React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This framework allows me to reuse components in different projects and is clear and efficient.
+
+
 
 ## 3rd party libraries
 
-In the project directory, you can run:
+In the project directory I use the following libraries:
 
 ### Bootstrap v5.0.1
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Link: [https://getbootstrap.com/](https://getbootstrap.com/) 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+I used it to styled the project in a simple and responsive way. 
+
+
 
 ### Font Awasome v5.15.3
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Link: [https://fontawesome.com/](https://fontawesome.com/) 
 
-### React router
+Vector icons and social logos. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### React Router
+
+Link: [https://reactrouter.com/](https://reactrouter.com//) 
+
+Library to handle the different routes within the React project. 
+
+
 
 ### React Modal
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Link: [https://www.npmjs.com/package/react-modal](https://www.npmjs.com/package/react-modal) 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This is a library that allows the handling of modals. I prefer to use it because it is easy and fast to create modal forms.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ### React Redux
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Link: [https://react-redux.js.org/](https://react-redux.js.org/) 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I prefer to use React Redux in React projects as it allows easy and clear handling of variables throughout the entire project. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
 
 ### Thunk
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Link: [https://www.npmjs.com/package/redux-thunk](https://www.npmjs.com/package/redux-thunk) 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+In this project it´s not implemented since it does not connect with any database. Allows asynchronous requests. I always use it together with React Redux to have a Backend ready environment.
 
 
 
 ### Moment
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Link: https://momentjs.com/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I used this library to handle JavaScript dates. It is easy and has many functionalities.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+
+### Animate.css
+
+Link: [https://animate.style/](https://animate.style/) 
+
+Library for creating CSS animations. I use it since the animations are very good and it avoids generating a lot of lines of code.

@@ -28,6 +28,7 @@ export const TaskModal = () => {
   const dispatch = useDispatch();
 
   const [formValues, setFormValues] = useState(initTask);
+  const [titleValid, setTitleValid] = useState(true);
 
   const { title } = formValues;
 
@@ -44,6 +45,11 @@ export const TaskModal = () => {
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
+
+    if (formValues.title.trim().length < 2) {
+      return setTitleValid(false);
+    }
+
     dispatch(
       taskAddNew({
         ...formValues,
@@ -52,6 +58,7 @@ export const TaskModal = () => {
       })
     );
 
+    setTitleValid(true);
     closeModal();
   };
 
@@ -71,11 +78,12 @@ export const TaskModal = () => {
         <div className="form-group">
           <label>Task Name</label>
           <input
-            className="form-control"
+            className={`form-control ${!titleValid && "is-invalid"}`}
             placeholder="Your project"
             name="title"
             value={title}
             onChange={handleInputChange}
+            autoComplete="off"
           />
         </div>
         <hr />

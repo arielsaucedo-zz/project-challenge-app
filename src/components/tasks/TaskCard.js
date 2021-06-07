@@ -18,7 +18,10 @@ export const TaskCard = ({ title, isComplete, projectId, id }) => {
   };
 
   return (
-    <div className="two" onClick={handleEntryClick}>
+    <div
+      className="two animate__animated animate__fadeIn"
+      onClick={handleEntryClick}
+    >
       <div className="d-flex justify-content-between px-2 align-content-center m-2">
         <h3 className="name">{title}</h3>
         <button
