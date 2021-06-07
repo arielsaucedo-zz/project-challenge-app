@@ -120,36 +120,6 @@ div .entry:hover {
   text-align: left;
 }
 
-.btn-raised {
-  transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
-    transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-}
-
-.btn-raised:not([disabled]):active,
-.btn-raised:not([disabled]):focus,
-.btn-raised:not([disabled]):hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
-  transform: translate3d(0, -1px, 0);
-  background-color: #8bc34a;
-}
-
-.btn-icon {
-  width: 2.125rem;
-  height: 2.125rem;
-  padding: 0 !important;
-}
-
-.btn-rounded {
-  border-radius: 4rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.light-green {
-  background-color: white;
-  color: rgba(0, 0, 0, 0.85);
-}
 /* ------------------------------------------ */
 
 /* Modal */

@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
-import { projectReducer } from "./projectReducer";
 
 import { uiReducer } from "./uiReducer";
+import { projectReducer } from "./projectReducer";
 
 export const rootReducer = combineReducers({
   ui: uiReducer,

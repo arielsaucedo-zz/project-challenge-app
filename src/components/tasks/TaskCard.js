@@ -1,11 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
+
 import { tasktActive, taskComplete } from "../../actions/project";
 
 export const TaskCard = ({ title, isComplete, projectId, id }) => {
   const { activeTask } = useSelector((state) => state.projects);
-  console.log(activeTask);
 
   const dispatch = useDispatch();
 

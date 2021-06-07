@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
+
 import { projectAddNew } from "../../actions/project";
 import { uiCloseModalProject } from "../../actions/ui";
 
@@ -28,6 +29,7 @@ export const ProyectModal = () => {
   const dispatch = useDispatch();
 
   const [titleValid, setTitleValid] = useState(true);
+
   const [formValues, setFormValues] = useState(initProyect);
   const { title } = formValues;
 

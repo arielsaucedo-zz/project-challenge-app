@@ -1,6 +1,7 @@
 import React from "react";
 import moment from "moment";
 import { useDispatch } from "react-redux";
+
 import { activeProject } from "../../actions/project";
 
 export const ProjectEntry = ({ id, title, type, date }) => {

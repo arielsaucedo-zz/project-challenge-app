@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { useDispatch, useSelector } from "react-redux";
+
 import { taskAddNew } from "../../actions/project";
 import { uiCloseModalTask } from "../../actions/ui";
 
@@ -27,9 +28,9 @@ export const TaskModal = () => {
 
   const dispatch = useDispatch();
 
-  const [formValues, setFormValues] = useState(initTask);
   const [titleValid, setTitleValid] = useState(true);
 
+  const [formValues, setFormValues] = useState(initTask);
   const { title } = formValues;
 
   const closeModal = () => {
