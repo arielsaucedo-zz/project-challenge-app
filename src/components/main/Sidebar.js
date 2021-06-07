@@ -1,6 +1,5 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
 
 import { uiOpenModalProject } from "../../actions/ui";
 import { ProjectEntries } from "./ProjectEntries";
@@ -25,7 +24,7 @@ export const Sidebar = () => {
         className="d-flex flex-column justify-content-center align-items-center new-entry"
         onClick={handleOpenModalProject}
       >
-        <i className="far fa-calendar-plus fa-5x" />
+        <i className="fas fa-tasks fa-5x" />
         <p className="mt-3">New project</p>
       </div>
 

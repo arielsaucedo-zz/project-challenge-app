@@ -3,4 +3,7 @@ export const types = {
   uiCloseModalProject: "[UI] Close Modal Project",
   uiOpenModalTask: "[UI] Open Modal Task",
   uiCloseModalTask: "[UI] Close Modal Task",
+
+  projectAddNew: "[Project] New Note",
+  projectActive: "[Project] Set active project",
 };

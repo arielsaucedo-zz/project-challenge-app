@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "react-modal";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
+import { projectAddNew } from "../../actions/project";
 import { uiCloseModalProject } from "../../actions/ui";
 
 const customStyles = {
@@ -16,12 +17,42 @@ const customStyles = {
 };
 Modal.setAppElement("#root");
 
+const initProyect = {
+  title: "",
+  type: "",
+};
+
 export const ProyectModal = () => {
   const { modalOpenProject } = useSelector((state) => state.ui);
+
   const dispatch = useDispatch();
+
+  const [formValues, setFormValues] = useState(initProyect);
+
+  const { title } = formValues;
 
   const closeModal = () => {
     dispatch(uiCloseModalProject());
+  };
+
+  const handleInputChange = ({ target }) => {
+    setFormValues({
+      ...formValues,
+      [target.name]: target.value,
+    });
+  };
+
+  const handleSubmitForm = (e) => {
+    e.preventDefault();
+    dispatch(
+      projectAddNew({
+        ...formValues,
+        id: new Date().getTime(),
+        date: new Date().getTime(),
+      })
+    );
+
+    closeModal();
   };
 
   return (
@@ -36,42 +67,47 @@ export const ProyectModal = () => {
     >
       <h1> New project </h1>
       <hr />
-      <form className="container">
+      <form className="container" onSubmit={handleSubmitForm}>
         <div className="form-group">
           <label>Project Name</label>
-          <input className="form-control" placeholder="Your project" />
+          <input
+            className="form-control"
+            name="title"
+            value={title}
+            placeholder="Your project"
+            onChange={handleInputChange}
+            autoComplete="off"
+          />
         </div>
         <hr />
         <div className="form-group">
-          <label>Choose your type of proyect</label>
+          <label>Choose your type of project</label>
         </div>
-        <div className="mt-3">
-          <div className="form-check form-switch">
-            <input
-              className="form-check-input"
-              type="checkbox"
-              id="flexSwitchCheckChecked"
-            />
-            <label
-              className="form-check-label"
-              htmlFor="flexSwitchCheckChecked"
-            >
-              Empty project
-            </label>
-          </div>
-          <div className="form-check form-switch">
-            <input
-              className="form-check-input"
-              type="checkbox"
-              id="flexSwitchCheckChecked"
-            />
-            <label
-              className="form-check-label"
-              htmlFor="flexSwitchCheckChecked"
-            >
-              React project
-            </label>
-          </div>
+        <div className="form-check mt-3">
+          <input
+            className="form-check-input"
+            type="radio"
+            name="type"
+            id="emptyProject"
+            value={"e"}
+            onChange={handleInputChange}
+          />
+          <label className="form-check-label" htmlFor="emptyProject">
+            Empty project
+          </label>
+        </div>
+        <div className="form-check">
+          <input
+            className="form-check-input"
+            type="radio"
+            name="type"
+            id="reactProject"
+            value={"r"}
+            onChange={handleInputChange}
+          />
+          <label className="form-check-label" htmlFor="reactProject">
+            React project
+          </label>
         </div>
 
         <button

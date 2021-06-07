@@ -1,16 +1,15 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { ProjectEntry } from "./ProjectEntry";
 
 export const ProjectEntries = () => {
+  const { project } = useSelector((state) => state.projects);
+
   return (
     <div className="entries">
-      <ProjectEntry />
+      {project.map((p) => (
+        <ProjectEntry key={p.id} {...p} />
+      ))}
     </div>
   );
 };
-
-/* <div className="journal__entries">
-      {notes.map((note) => (
-        <ProjectEntry key={note.id} {...note} />
-      ))}
-    </div> */

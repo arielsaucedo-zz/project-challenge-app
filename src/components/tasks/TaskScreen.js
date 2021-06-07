@@ -7,9 +7,7 @@ export const TaskScreen = () => {
   return (
     <div className="d-flex flex-column">
       <TaskAppBar />
-      <div className="d-flex p-3">
-        <TaskCard />
-      </div>
+      <div className="d-flex p-3">{/* <TaskCard /> */}</div>
       <TaskModal />
     </div>
   );

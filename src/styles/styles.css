@@ -57,6 +57,9 @@ div .new-entry:hover {
   margin-bottom: 10px;
   overflow: hidden;
 }
+div .entry:hover {
+  cursor: pointer;
+}
 
 .entry-picture {
   height: 70px;
