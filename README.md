@@ -2,11 +2,18 @@
 
 This framework allows me to reuse components in different projects and is clear and efficient.
 
+- In order to run the application:
+
+  - Go to the project folder
+  - Open the terminal
+  - Run the command "npm start"
+
+
 
 
 ## 3rd party libraries
 
-In the project directory I use the following libraries:
+In the project directory, I use the following libraries:
 
 ### Bootstrap v5.0.1
 
@@ -16,7 +23,7 @@ I used it to styled the project in a simple and responsive way.
 
 
 
-### Font Awasome v5.15.3
+### Font Awesome v5.15.3
 
 Link: [https://fontawesome.com/](https://fontawesome.com/) 
 
@@ -68,4 +75,4 @@ I used this library to handle JavaScript dates. It is easy and has many function
 
 Link: [https://animate.style/](https://animate.style/) 
 
-Library for creating CSS animations. I use it since the animations are very good and it avoids generating a lot of lines of code.
+Library for creating CSS animations. I use it since it avoids generating a lot of lines of code.
