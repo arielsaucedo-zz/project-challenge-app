@@ -6,4 +6,9 @@ export const types = {
 
   projectAddNew: "[Project] New Note",
   projectActive: "[Project] Set active project",
+  projectDelete: "[Project] Delete Project",
+
+  taskAddNew: "[Project] New task",
+  tasktActive: "[Project] Set active task",
+  tasktComplete: "[Project] Task Complete",
 };

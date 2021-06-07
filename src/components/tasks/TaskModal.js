@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "react-modal";
 import { useDispatch, useSelector } from "react-redux";
+import { taskAddNew } from "../../actions/project";
 import { uiCloseModalTask } from "../../actions/ui";
 
 const customStyles = {
@@ -15,12 +16,43 @@ const customStyles = {
 };
 Modal.setAppElement("#root");
 
+const initTask = {
+  title: "",
+  isComplete: false,
+};
+
 export const TaskModal = () => {
   const { modalOpenTask } = useSelector((state) => state.ui);
+  const { active } = useSelector((state) => state.projects);
+
   const dispatch = useDispatch();
+
+  const [formValues, setFormValues] = useState(initTask);
+
+  const { title } = formValues;
 
   const closeModal = () => {
     dispatch(uiCloseModalTask());
+  };
+
+  const handleInputChange = ({ target }) => {
+    setFormValues({
+      ...formValues,
+      [target.name]: target.value,
+    });
+  };
+
+  const handleSubmitForm = (e) => {
+    e.preventDefault();
+    dispatch(
+      taskAddNew({
+        ...formValues,
+        projectId: active.id,
+        id: new Date().getTime(),
+      })
+    );
+
+    closeModal();
   };
 
   return (
@@ -35,10 +67,16 @@ export const TaskModal = () => {
     >
       <h1> New task </h1>
       <hr />
-      <form className="container">
+      <form className="container" onSubmit={handleSubmitForm}>
         <div className="form-group">
           <label>Task Name</label>
-          <input className="form-control" placeholder="Your project" />
+          <input
+            className="form-control"
+            placeholder="Your project"
+            name="title"
+            value={title}
+            onChange={handleInputChange}
+          />
         </div>
         <hr />
 

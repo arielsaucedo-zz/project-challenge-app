@@ -28,7 +28,6 @@ export const ProyectModal = () => {
   const dispatch = useDispatch();
 
   const [formValues, setFormValues] = useState(initProyect);
-
   const { title } = formValues;
 
   const closeModal = () => {

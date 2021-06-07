@@ -16,9 +16,8 @@ export const Sidebar = () => {
       <div className="d-flex justify-content-between">
         <h3 className="fw-lighter fs-3 mt-1">
           <i className="fas fa-user-tie"></i>
-          <span> Ariel</span>
+          <span> User</span>
         </h3>
-        <button className="btn btn-secondary btn-sm fs-6 mt-1">Logout</button>
       </div>
       <div
         className="d-flex flex-column justify-content-center align-items-center new-entry"

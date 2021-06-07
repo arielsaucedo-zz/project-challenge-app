@@ -1,26 +1,32 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { tasktActive, taskComplete } from "../../actions/project";
 
-export const TaskCard = () => {
+export const TaskCard = ({ title, isComplete, projectId, id }) => {
+  const { activeTask } = useSelector((state) => state.projects);
+  console.log(activeTask);
+
+  const dispatch = useDispatch();
+
+  const handleEntryClick = () => {
+    dispatch(tasktActive(id, { title, isComplete, projectId }));
+  };
+
+  const handleDelete = () => {
+    dispatch(taskComplete(activeTask.id));
+  };
+
   return (
-    <div className="two">
-      <div className="d-flex justify-content-between px-2 align-items-center m-2">
-        <h3 className="name">Task 1</h3>
-        <button className="btn btn-raised btn-wave btn-icon btn-rounded mb-1 light-green">
-          {" "}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="feather feather-check"
-          >
-            <polyline points="20 6 9 17 4 12"></polyline>
-          </svg>{" "}
+    <div className="two" onClick={handleEntryClick}>
+      <div className="d-flex justify-content-between px-2 align-content-center m-2">
+        <h3 className="name">{title}</h3>
+        <button
+          type="button"
+          className="btn btn-success align-self-center"
+          onDoubleClick={handleDelete}
+        >
+          <i class="fas fa-check"></i>
         </button>
       </div>
     </div>
