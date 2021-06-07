@@ -29,7 +29,7 @@ export const TaskCard = ({ title, isComplete, projectId, id }) => {
           className="btn btn-success align-self-center"
           onDoubleClick={handleDelete}
         >
-          <i class="fas fa-check"></i>
+          <i className="fas fa-check"></i>
         </button>
       </div>
     </div>
