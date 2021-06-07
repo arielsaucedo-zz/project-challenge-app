@@ -4,9 +4,10 @@ This framework allows me to reuse components in different projects and is clear 
 
 - In order to run the application:
 
-  - Go to the project folder
-  - Open the terminal
-  - Run the command "npm start"
+  - Go to the project folder.
+  - Open the terminal.
+  - Run the command "npm install" to install all the dependencies.
+  - Run the command "npm start" to run the project.
 
 
 
